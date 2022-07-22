@@ -1,7 +1,18 @@
 # ruankao-results-query
 计算机技术与软件专业技术资格考试成绩查询脚本
 
+## 依赖
+
+- python3
+- pip3
+
+- requests
+- BeautifulSoup
+- ddddocr
+
 ## 用法
+
+依赖：
 
 参数配置：
 ``` python
