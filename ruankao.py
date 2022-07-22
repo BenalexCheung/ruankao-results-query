@@ -13,7 +13,8 @@ STAGE = '2022年上半年'
 KEY_WORD = '%s计算机技术与软件专业技术资格(水平)考试成绩查询通知' % STAGE
 
 CANDIDATE_NAME = '张三'  # 准考证姓名
-CANDIDATE_NO = '20228888888888888'  # 准考证号
+CANDIDATE_NO = '20228888888888888'  # 准考证号 or 身份证号
+SELECT_TYPE = '0' # 0: 准考证号 1: 身份证号
 
 PUSH_KEY = 'xxx'  # 推送消息的key
 
@@ -78,7 +79,7 @@ def query_result():
             'xm': CANDIDATE_NAME,
             'zjhm': CANDIDATE_NO,
             'jym': captcha,
-            'select_type': '0'
+            'select_type': SELECT_TYPE
         }
         response = requests.post('https://query.ruankao.org.cn//score/result',
                                  data=params,
